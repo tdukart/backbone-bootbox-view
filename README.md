@@ -8,6 +8,40 @@ which it itself a [Bootstrap](http://getbootstrap.com) dialog.
 
 This project is not affiliated in any way with Bootbox or Bootstrap.
 
+Installation
+============
+
+This is distributed as a Bower package, or you may download it yourself.
+
+Requirements
+------------
+
+Note that these dependencies will automatically be downloaded if you use the Bower package.
+
+[Bootstrap](http://getbootstrap.com)
+[Bootbox](http://bootboxjs.com)
+[jQuery](http://jquery.com)
+[Backbone](http://backbonejs.org)
+
+Bower
+-----
+````bash
+
+bower install backbone-bootbox-view --save
+
+````
+
+If you don't already have them, Bower will automatically download the dependencies.
+
+Self-Installation
+-----------------
+Download the latest at https://github.com/tdukart/backbone-bootbox-view/releases/latest.
+
+Styles
+------
+Ensure that the Bootstrap styles are included in your <head>. See [Bootstrap's Getting Started page](http://getbootstrap.com/getting-started/) for installation instructions.
+
+
 Usage
 =====
 
