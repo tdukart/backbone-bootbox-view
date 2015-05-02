@@ -38,11 +38,32 @@
         show: false
       });
 
-      //Bind the button callbacks with the dialog as "this"
       if (dialogOptions.buttons) {
+
         for (var buttonIdx in dialogOptions.buttons) {
-          if (dialogOptions.buttons.hasOwnProperty(buttonIdx) && dialogOptions.buttons[buttonIdx].callback) {
-            dialogOptions.buttons[buttonIdx].callback = dialogOptions.buttons[buttonIdx].callback.bind(this);
+
+          if (dialogOptions.buttons.hasOwnProperty(buttonIdx)) {
+
+            if (dialogOptions.buttons[buttonIdx].callback) {
+
+              //Bind the provided callback with the dialog as "this".
+              dialogOptions.buttons[buttonIdx].callback = dialogOptions.buttons[buttonIdx].callback.bind(this);
+
+            } else {
+
+              //Trigger an event for the button
+
+              //closure to prevent mutation
+              (function(buttonIdx, dialog) {
+                var buttonEvent = 'btn' + capitalize(buttonIdx);
+
+                dialogOptions.buttons[buttonIdx].callback = function() {
+                  return dialog.trigger(buttonEvent);
+                }.bind(dialog);
+                
+              })(buttonIdx, this);
+
+            }
           }
         }
       }
@@ -62,5 +83,9 @@
       this._$dialog.modal('show');
     }
   });
+
+  function capitalize(string) {
+    return string.slice(0, 1).toUpperCase() + string.slice(1);
+  }
 
 }));

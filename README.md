@@ -81,9 +81,10 @@ Define your buttons in the `options` map:
 options: {
   title: 'Dialog Title',
   buttons: {
-    cancel: {
+    close: {
       label: 'Cancel',
       className: 'btn-default'
+      //When clicked, this button will trigger the btnClose event. See "Button Events" below for more information.
     },
     save: {
       label: 'Save',
@@ -98,7 +99,31 @@ options: {
 },
 
 ````
-    
+
+Button Events
+-------------
+Buttons that are not given a callback will automatically trigger an event that can be caught -- with a major caveat.
+You must write the listener inside your `.render()` method with a `this.on` call. The event name will be `btn` followed
+by the capitalized version of the key passed in the `buttons` map -- `btnClose` in the example above.
+
+Example:
+
+````javascript
+render: function() {
+
+  //...
+  
+  this.on('btnKeyName', handler.bind(this));
+
+  //...
+
+}
+
+````
+
+Binding button events to the dialog using Backbone's conventional `events: {}` map is not currently supported.
+
+
 License
 =======
 
