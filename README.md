@@ -18,10 +18,10 @@ Requirements
 
 Note that these dependencies will automatically be downloaded if you use the Bower package.
 
-[Bootstrap](http://getbootstrap.com)
-[Bootbox](http://bootboxjs.com)
-[jQuery](http://jquery.com)
-[Backbone](http://backbonejs.org)
+- [Bootstrap](http://getbootstrap.com)
+- [Bootbox](http://bootboxjs.com)
+- [jQuery](http://jquery.com)
+- [Backbone](http://backbonejs.org)
 
 Bower
 -----
