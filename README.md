@@ -1,6 +1,8 @@
 Backbone Bootbox View
 =====================
 
+[![Build Status](https://travis-ci.org/tdukart/backbone-bootbox-view.svg?branch=master)](https://travis-ci.org/tdukart/backbone-bootbox-view)
+
 This module extends Backbone's View to render a specially designed view in a [Bootbox](http://bootboxjs.com) dialog,
 which it itself a [Bootstrap](http://getbootstrap.com) dialog.
 
