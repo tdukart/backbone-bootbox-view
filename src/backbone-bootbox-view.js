@@ -18,7 +18,9 @@
 }(this, function($, Backbone, Bootbox) {
 
   return Backbone.View.extend({
+
     name: 'BootboxView',
+
     defaultOptions: {
       buttons: {
         ok: {
@@ -29,9 +31,11 @@
         }
       }
     },
+
     initialize: function() {
       this.prepareDialog().render().show();
     },
+
     prepareDialog: function() {
       var dialogOptions = $.extend({}, this.defaultOptions, this.options || {}, {
         message: '<div class="bootbox-view-body" />',
@@ -68,10 +72,10 @@
         }
       }
 
-      var dialogContainer = $('<div>');
+      var $dialogContainer = $('<div>');
 
       if (this.className) {
-        dialogContainer.addClass(this.className);
+        $dialogContainer.addClass(this.className);
       }
 
       this._$dialog = Bootbox.dialog(dialogOptions);
@@ -79,9 +83,11 @@
 
       return this;
     },
+
     show: function() {
       this._$dialog.modal('show');
     }
+
   });
 
   function capitalize(string) {
