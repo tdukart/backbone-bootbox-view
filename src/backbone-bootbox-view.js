@@ -25,7 +25,7 @@
           label: 'OK',
           callback: function() {
             this.trigger('buttonOk');
-          }.bind(this)
+          }
         }
       }
     },
@@ -37,6 +37,15 @@
         message: '<div class="bootbox-view-body" />',
         show: false
       });
+
+      //Bind the button callbacks with the dialog as "this"
+      if (dialogOptions.buttons) {
+        for (var buttonIdx in dialogOptions.buttons) {
+          if (dialogOptions.buttons.hasOwnProperty(buttonIdx) && dialogOptions.buttons[buttonIdx].callback) {
+            dialogOptions.buttons[buttonIdx].callback = dialogOptions.buttons[buttonIdx].callback.bind(this);
+          }
+        }
+      }
 
       var dialogContainer = $('<div>');
 
