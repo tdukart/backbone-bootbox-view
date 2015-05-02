@@ -8,9 +8,7 @@
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['jquery', 'backbone', 'bootbox'], function($, Backbone, Bootbox) {
-      // Also create a global in case some scripts
-      // that are loaded still are looking for
-      // a global even when an AMD loader is in use.
+      // Also create a global in case some scripts that are loaded still are looking for a global even when an AMD loader is in use.
       return (Backbone.BootboxView = factory($, Backbone, Bootbox));
     });
   } else {
@@ -18,7 +16,6 @@
     root.Backbone.BootboxView = factory(root.$, root.Backbone, root.bootbox);
   }
 }(this, function($, Backbone, Bootbox) {
-  //use b in some fashion.
 
   return Backbone.View.extend({
     name: 'BootboxView',
