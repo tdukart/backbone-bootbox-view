@@ -13,47 +13,57 @@ Usage
 
 To render a view in a dialog, it needs to be designated as a BootboxView.
 
-    var myDialog = Backbone.BootboxView.extend({
+````javascript
+
+var myDialog = Backbone.BootboxView.extend({
+
+  options: {}, //Options to be passed to Bootbox, except message and show.
+  
+  className: '', //Class name that the contents of the dialog will be wrapped in
+  
+  initialize: function() {
+  
+    /*
+     * prepareDialog() is necessary to put the view in a dialog.
+     * show() is necessary to show the dialog.
+     */
+     
+    this.prepareDialog().render().show(); 
     
-      options: {}, //Options to be passed to Bootbox, except message and show.
-      
-      className: '', //Class name that the contents of the dialog will be wrapped in
-      
-      initialize: function() {
-      
-        /*
-         * prepareDialog() is necessary to put the view in a dialog. show() is necessary to show the dialog.
-         */
-         
-        this.prepareDialog().render().show(); 
-        
-      },
-      
-      render: function() {
-        //Rendering works just like a regular Bootstrap view.
-      },
-    
-    });
+  },
+  
+  render: function() {
+    //Rendering works just like a regular Bootstrap view.
+  },
+
+});
+
+````
     
 Define your buttons in the `options` map:
 
-    options: {
-      title: 'Dialog Title',
-      buttons: {
-        cancel: {
-          label: 'Cancel',
-          className: 'btn-default'
-        },
-        save: {
-          label: 'Save',
-          className: 'btn-primary',
-          callback: function() {
-            this.trigger('btnSave');
-            return false;
-          }.bind(this)
-        }
-      }
+````javascript
+
+options: {
+  title: 'Dialog Title',
+  buttons: {
+    cancel: {
+      label: 'Cancel',
+      className: 'btn-default'
     },
+    save: {
+      label: 'Save',
+      className: 'btn-primary',
+      callback: function() {
+        //Note that "this" will automatically be bound to the View
+        this.trigger('btnSave');
+        return false;
+      }
+    }
+  }
+},
+
+````
     
 License
 =======
