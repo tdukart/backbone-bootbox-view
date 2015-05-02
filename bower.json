@@ -7,14 +7,15 @@
   ],
   "description": "Module to extend Backbone views to use Bootbox, a Bootstrap modal library",
   "moduleType": [
-    "amd"
+    "amd",
+    "globals"
   ],
   "keywords": [
     "bootbox",
     "bootstrap",
     "backbone"
   ],
-  "license": "BSD",
+  "license": "BSD 3-Clause",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -27,5 +28,6 @@
     "backbone": "~1.1.2",
     "bootbox": "~4.4.0",
     "bootstrap": "~3.3.4"
-  }
+  },
+  "homepage": "https://github.com/tdukart/backbone-bootbox-view"
 }
