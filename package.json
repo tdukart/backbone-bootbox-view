@@ -1,0 +1,17 @@
+{
+  "name": "backbone-bootbox-view",
+  "version": "0.0.1",
+  "description": "Module to extend Backbone views to use Bootbox, a Bootstrap modal library",
+  "main": "dist/backbone-bootbox-view.js",
+  "devDependencies": {
+    "concat": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Todd Dukart <tdukart@aloftinteractive.com>",
+  "license": "BSD"
+}

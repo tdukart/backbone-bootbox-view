@@ -1,0 +1,31 @@
+{
+  "name": "backbone-bootbox-view",
+  "main": "backbone-bootbox-view.js",
+  "version": "0.0.1",
+  "authors": [
+    "Todd Dukart <tdukart@aloftinteractive.com>"
+  ],
+  "description": "Module to extend Backbone views to use Bootbox, a Bootstrap modal library",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "bootbox",
+    "bootstrap",
+    "backbone"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.1.2",
+    "bootbox": "~4.4.0",
+    "bootstrap": "~3.3.4"
+  }
+}
