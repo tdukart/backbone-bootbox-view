@@ -1,6 +1,5 @@
 {
   "name": "backbone-bootbox-view",
-  "version": "0.0.1",
   "description": "Module to extend Backbone views to use Bootbox, a Bootstrap modal library",
   "main": "dist/backbone-bootbox-view.js",
   "devDependencies": {
