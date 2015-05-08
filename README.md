@@ -8,6 +8,8 @@ which it itself a [Bootstrap](http://getbootstrap.com) dialog.
 
 This project is not affiliated in any way with Bootbox or Bootstrap.
 
+Licensed under the [BSD 3-Clause license](http://opensource.org/licenses/BSD-3-Clause).
+
 Installation
 ============
 
